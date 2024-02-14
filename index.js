@@ -70,7 +70,8 @@ function myValues(object) {
     return Object.values(object);
 }
 function mySortBy(array, callback) {
-    return array.toSorted((a, b) => {
+    let copy = [...array]
+    return copy.sort((a, b) => {
         if(callback(a) < callback(b)) {
             return -1;
         } else if (callback(a) > callback(b)) {
