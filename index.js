@@ -80,6 +80,8 @@ function mySortBy(array, callback) {
         }
     });
 }
+const stooges = [{name: 'moe', age: 40}, {name: 'larry', age: 50}, {name: 'curly', age: 60}];
+console.log(mySortBy(stooges, function(stooge){ return stooge.name }));
 function myFlatten(array, boo, newArr=[]) {
     let counter = 0;
     function unNest(arr) {
@@ -103,4 +105,3 @@ function myFlatten(array, boo, newArr=[]) {
     isItNested(array);
     return newArr;
 }
-console.log(myFlatten([1, [2, 3], [[4, 5], 6, [7, [8, 9]]]], true));
